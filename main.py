@@ -4,12 +4,12 @@ from bs4 import BeautifulSoup
 import numpy as np
 import pandas as pd
 from matplotlib import pyplot as plt
-# url = "https://finance.yahoo.com/crypto"
-# r = requests.get(url)
-# if r.status_code == 200:
-#     with open("y_finance.html","w") as f:
-#         f.write(r.text)
-#         f.close()
+url = "https://finance.yahoo.com/crypto"
+r = requests.get(url)
+if r.status_code == 200:
+    with open("y_finance.html","w") as f:
+        f.write(r.text)
+        f.close()
 
 with open("y_finance.html","r") as f:
     soup = BeautifulSoup(f,"html.parser")
